@@ -5,12 +5,12 @@ import db from "../../../db";
 const cache = require("../../../cache");
 
 const CLIENT_ID = "732997942193160222"
-const CLIENT_SECRET = "-odrmaZwI9hrvO1i74mlL-0ryoe2jTCx"
+const CLIENT_SECRET = process.env.DISCORD
 const REDIRECT = "http://localhost:3000/api/authentication/discord"
 
 export default async function Login(req: NextApiRequest, res: NextApiResponse) {
     if(!req.query.code) return res.redirect("https://discord.com/api/oauth2/authorize?client_id=732997942193160222&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fapi%2Fauthentication%2Fdiscord&response_type=code&scope=identify%20email")
-    
+
     const data = new URLSearchParams()
     data.append("client_id", CLIENT_ID)
     data.append("client_secret", CLIENT_SECRET)
@@ -18,9 +18,9 @@ export default async function Login(req: NextApiRequest, res: NextApiResponse) {
     data.append("code", req.query.code as string)
     data.append("redirect_uri", REDIRECT)
     const resp = await axios.post("https://discord.com/api/v10/oauth2/token", data, {headers: {"Content-Type": "application/x-www-form-urlencoded"}})
-    
+
     if(resp.status === 200 && resp.data.access_token) {
-        
+
         const accessToken = resp.data.access_token
         const r = await axios.get("https://discord.com/api/v10/users/@me", {headers: {Authorization: `Bearer ${accessToken}`}})
         if(!r.data.email) return res.send("Error B.")
