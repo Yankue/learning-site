@@ -1,0 +1,65 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+enum RegisterType {
+  EMAIL
+  GOOGLE
+  FACEBOOK
+  TWITTER
+  DISCORD
+}
+enum CourseType {
+  EXAM
+  EDUCATION
+}
+
+
+
+
+
+model User {
+  id String @id @unique
+
+  username String
+  password String
+  email    String
+  avatar   String?
+
+  registeredWith RegisterType
+  tokens AuthToken[]
+  courses String
+}
+
+model Course {
+  id String @id @unique
+
+  name String
+  tags String @default("")
+  type CourseType
+  description String @default("")
+
+  structure String @default("")
+  modules Module[]
+}
+
+model Module {
+  id String @id @unique
+  name String
+
+  course Course @relation(fields: [courseId], references: [id])
+  courseId String
+}
+
+model AuthToken {
+  token String @id @unique
+  owner User @relation(references: [id], fields: [ownerId])
+  ownerId String
+}

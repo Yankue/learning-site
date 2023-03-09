@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Mulish-Bold";
+  src: url("/fonts/Mulish-Bold.ttf");
+}
+@font-face {
+  font-family: "Mulish-Regular";
+  src: url("/fonts/Mulish-Regular.ttf");
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.slogan {
+  margin-top: calc(24vh);
+  font-size: 4.3rem;
+  text-align: center;
+  font-family: 'Mulish-Bold', Arial, sans-serif;
+}
+
+.subslogan {
+  margin-top: 19px;
+  color: #dddddd;
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: 'Mulish-Regular', Arial, sans-serif;
+}
+
+.slogan > span {
+  color: #3BA1DE;
+}
+
+.centreBlock{
+  display: flex;
+  justify-content: center;
+}
+
+.getStartedButton{
+  margin-top: 30px;
+  background-color: #3BA1DE; /* 0085FF */
+  font-size: 30px;
+  border: none;
+  border-radius: 27px;
+  color: black;
+  padding: 12px 50px 12px 50px;
+  font-family: 'Mulish-Bold', Arial, sans-serif;
+  cursor: pointer;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+  .slogan {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .slogan {
+    font-size: 2.1rem;
+  }
+
+  .subslogan {
+    font-size: 1rem;
+  }
+}

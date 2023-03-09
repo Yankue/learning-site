@@ -1,0 +1,66 @@
+.modalOuter {
+    display: none;
+    position: absolute;
+    width: 70vw;
+    left: 15vw;
+    top: 10vh;
+    height: 80vh;
+    background-color: #191919;
+    border: 2px solid #252525;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.modalActive {
+    display: block;
+}
+
+.closeButton {
+    position: absolute;
+    left: calc(100% - 35px);
+    font-size: 44px;
+    margin-top: -15px;
+}
+
+.modalTitle{
+    text-align: center;
+    margin-top: -10px;
+    color: #c706ad;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.pTitle {
+    text-align: center;
+    font-size: 46px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #9A42FD;
+}
+
+.courseBox {
+    width: 23vw;
+    height: 90px;
+    border: solid 2px white;
+    cursor: pointer;
+}
+
+.courseBox > span {
+    font-size: 34px;
+}
+
+.courseContainer {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 23vw 23vw 23vw;
+    column-gap: 25px;
+    row-gap: 25px;
+    margin-left: calc(15.5vw - 25px);
+}
+
+@media screen and (max-width: 1000px) {
+    .modalOuter {
+        width: 90vw;
+        left: 5vw;
+    }
+}

@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE `course` ADD COLUMN `description` VARCHAR(191) NOT NULL DEFAULT '',
+    ADD COLUMN `structure` VARCHAR(191) NOT NULL DEFAULT '';

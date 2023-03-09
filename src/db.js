@@ -1,0 +1,9 @@
+const { PrismaClient } = require('@prisma/client')
+
+// @ts-ignore
+const prisma = global.prisma || new PrismaClient()
+
+// @ts-ignore
+if (process.env.NODE_ENV === 'development') global.prisma = prisma
+
+module.exports = prisma

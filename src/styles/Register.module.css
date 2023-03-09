@@ -1,0 +1,139 @@
+.innerContent {
+    margin-top: calc(20px + 3vh);
+    width: 40vw;
+    margin-left: 30vw;
+    border: 3px solid #2f2f2f;
+    text-align: center;
+}
+
+.registerHomepage{
+    width: 70vw;
+    margin-left: 15vw;
+    text-align: center;
+}
+
+.sectionBox {
+    border: 3px solid #2f2f2f;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 5px;
+}
+
+
+.sectionTitle {
+    color: #dd22ce;
+    font-weight: 600;
+    font-size: 38px;
+    text-align: center;
+}
+
+.buttonBox {
+    width: 340px;
+    border-radius: 7px;
+    height: 50px;
+    font-size: 25px;
+    text-align: left;
+    padding-right: 10px;
+    margin-top: 5px;
+    display: flex;
+    cursor: pointer;
+    background-color: #f2f2f2;
+}
+
+.providerIcon {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.buttonText {
+    margin-top: 6.25px;
+    margin-left: 6px;
+    color: black;
+}
+
+.subheading {
+    color: #dd22ce;
+    font-weight: 600;
+    font-size: 32px;
+    text-align: center;
+}
+
+.inputField {
+    margin-top: 10px;
+    width: 26vw;
+    font-size: 24px;
+    height: 38px;
+    padding-left: 8px;
+}
+
+.inputLabel {
+    color: #8a37e8;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.avatar {
+    position: relative;
+    width: 70px;
+    height: 70px;
+}
+
+.createAcc {
+    margin-top: 42px;
+    width: 190px;
+    height: 37px;
+    font-size: 25px;
+    margin-bottom: 10px;
+    background-color: #8a37e8;
+    color: #15ff00;
+    border: none;
+    cursor: pointer;
+}
+
+.continueWithEmail {
+    margin-top: 2px;
+    width: 152px;
+    height: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    background-color: #8a37e8;
+    color: #15ff00;
+    border: none;
+    cursor: pointer;
+}
+
+.createAcc:hover {
+    border: 2px solid rgb(99, 196, 222);
+}
+
+.avatarImg {border-radius: 50%;}
+
+
+@media screen and (max-width: 1300px) {
+    .innerContent {
+        width: 75vw;
+        margin-left: 12.5vw;
+    }
+
+    .inputField {
+        width: 40vw;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .innerContent {
+        width: 85vw;
+        margin-left: 7.5vw;
+    }
+
+    .inputField {
+        width: 60vw;
+    }
+
+    .registerHomepage {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+}

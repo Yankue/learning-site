@@ -1,0 +1,84 @@
+
+.body {
+    width: 70vw;
+    margin-left: 15vw;
+}
+
+
+.return {
+    font-weight: 500;
+    color: grey;
+    cursor: pointer;
+}
+
+
+.courseName {
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.description {
+    width: 45vw;
+}
+
+.sectionCardContainer {
+    margin-top: 20px;
+}
+
+.sectionName {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.subsectionContainer {
+    height: 200px;
+    display: flex;
+    overflow: scroll;
+}
+
+.card {
+    width: 323.6px;
+    background-color: #323232;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    padding: 10px;
+    position: relative;
+    border: 3px solid #fff;
+}
+
+.cardTitle {
+    color: #bbefff;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.cardContent {
+    color: #3BA1DE;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 0;
+    padding: 0 0 0 10px;
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .body {
+        width: 90vw;
+        margin-left: 5vw;
+    }
+    .courseName {
+        text-align: center;
+    }
+    .description {
+        width: 100%;
+        text-align: center;
+    }
+}
